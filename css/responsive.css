@@ -1,0 +1,327 @@
+/* Responsive styles for Bible Timeline - Editorial Style */
+
+/* ============================================
+   Large screens (1400px+)
+   ============================================ */
+
+@media (min-width: 1400px) {
+    :root {
+        --timeline-left: 12%;
+        --content-left: 38%;
+        --content-width: 45%;
+    }
+}
+
+/* ============================================
+   Tablet (1024px and below)
+   ============================================ */
+
+@media (max-width: 1024px) {
+    :root {
+        --year-font-size: clamp(3rem, 7vw, 6rem);
+        --timeline-left: 10%;
+        --content-left: 38%;
+        --content-width: 58%;
+        --era-right: 3%;
+    }
+
+    .era-text {
+        font-size: 1rem;
+    }
+}
+
+/* ============================================
+   Small Tablet (768px and below)
+   ============================================ */
+
+@media (max-width: 768px) {
+    :root {
+        --year-font-size: clamp(2.5rem, 8vw, 5rem);
+        --space-md: 1.5rem;
+        --space-lg: 3rem;
+        --space-xl: 5rem;
+    }
+
+    /* Hide timeline track on mobile */
+    .timeline-track {
+        display: none;
+    }
+
+    /* Year display moves to top left area */
+    .year-display {
+        left: var(--space-md);
+        top: auto;
+        bottom: var(--space-lg);
+        transform: none;
+    }
+
+    .year-number {
+        font-size: var(--year-font-size);
+    }
+
+    /* Era label at top right */
+    .era-label {
+        top: var(--space-md);
+        right: var(--space-md);
+        transform: none;
+    }
+
+    .era-text {
+        writing-mode: horizontal-tb;
+        font-size: 0.875rem;
+    }
+
+    /* Content full width with padding */
+    .timeline-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 0 var(--space-md);
+        padding-top: 30vh;
+    }
+
+    /* Book grid adjustments for tablet */
+    .book-columns {
+        left: var(--space-md);
+        width: calc(100% - var(--space-md) * 2);
+        height: 320px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: var(--space-sm);
+    }
+
+    .book-card__title {
+        font-size: 1.25rem;
+    }
+
+    .timeline-step {
+        min-height: 80vh;
+        padding-bottom: 20vh;
+    }
+
+    .intro-title {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .book-title {
+        font-size: clamp(1.75rem, 6vw, 2.5rem);
+    }
+
+    /* Multi-book horizontal with scroll on tablet */
+    .book-group {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: var(--space-sm);
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .book-item {
+        min-width: 140px;
+        max-width: 180px;
+    }
+
+    /* Reduce stagger on tablet */
+    .book-item:nth-child(2) { margin-top: 1rem; }
+    .book-item:nth-child(3) { margin-top: 2rem; }
+    .book-item:nth-child(4) { margin-top: 3rem; }
+
+    .book-item__title {
+        font-size: 1.25rem;
+    }
+}
+
+/* ============================================
+   Mobile (600px and below)
+   ============================================ */
+
+@media (max-width: 600px) {
+    :root {
+        --year-font-size: clamp(2rem, 10vw, 4rem);
+        --space-md: 1rem;
+    }
+
+    .site-header {
+        top: var(--space-sm);
+        left: var(--space-sm);
+    }
+
+    .site-footer {
+        bottom: var(--space-sm);
+        left: var(--space-sm);
+    }
+
+    .year-display {
+        left: var(--space-sm);
+        bottom: var(--space-md);
+    }
+
+    .era-label {
+        top: var(--space-sm);
+        right: var(--space-sm);
+    }
+
+    .timeline-content {
+        padding: 0 var(--space-sm);
+        padding-top: 25vh;
+    }
+
+    /* Book grid adjustments for mobile - 3 columns x 4 rows */
+    .book-columns {
+        left: var(--space-sm);
+        width: calc(100% - var(--space-sm) * 2);
+        height: 340px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: var(--space-xs);
+    }
+
+    .book-card {
+        padding: var(--space-xs);
+    }
+
+    .book-card__title {
+        font-size: 1rem;
+    }
+
+    .book-card__date {
+        font-size: 0.6875rem;
+    }
+
+    .book-card__meta {
+        font-size: 0.5625rem;
+    }
+
+    .timeline-step {
+        min-height: 70vh;
+    }
+
+    .book-meta {
+        font-size: 0.75rem;
+    }
+
+    /* Horizontal scroll with smaller stagger on mobile */
+    .book-group {
+        gap: var(--space-md);
+    }
+
+    .book-item {
+        min-width: 120px;
+        max-width: 160px;
+    }
+
+    /* Smaller stagger on mobile */
+    .book-item:nth-child(2) { margin-top: 0.75rem; }
+    .book-item:nth-child(3) { margin-top: 1.5rem; }
+    .book-item:nth-child(4) { margin-top: 2.25rem; }
+
+    .book-item__title {
+        font-size: 1.125rem;
+    }
+}
+
+/* ============================================
+   Small Mobile (480px and below)
+   ============================================ */
+
+@media (max-width: 480px) {
+    :root {
+        --year-font-size: clamp(1.75rem, 12vw, 3rem);
+    }
+
+    /* Book grid - 2 columns x 6 rows for smallest screens */
+    .book-columns {
+        height: 420px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .book-card__title {
+        font-size: 0.9375rem;
+    }
+
+    .intro-subtitle {
+        font-size: 1rem;
+    }
+
+    .book-description {
+        font-size: 0.9375rem;
+    }
+
+    .closing-text {
+        font-size: 1.25rem;
+    }
+}
+
+/* ============================================
+   Accessibility: Reduced Motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .step-content {
+        opacity: 1;
+        transform: none;
+    }
+
+    .timeline-step.is-active .step-content {
+        transform: none;
+    }
+}
+
+/* ============================================
+   Accessibility: High Contrast
+   ============================================ */
+
+@media (prefers-contrast: high) {
+    :root {
+        --color-bg: #000000;
+        --color-text: #ffffff;
+        --color-text-muted: #cccccc;
+        --color-text-dim: #999999;
+        --color-line: rgba(255, 255, 255, 0.4);
+    }
+
+    .step-content {
+        opacity: 0.5;
+    }
+
+    .timeline-step.is-active .step-content {
+        opacity: 1;
+    }
+}
+
+/* ============================================
+   Print styles
+   ============================================ */
+
+@media print {
+    .site-header,
+    .site-footer,
+    .timeline-track,
+    .year-display,
+    .era-label,
+    .scroll-hint {
+        display: none;
+    }
+
+    .timeline-content {
+        margin: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .timeline-step {
+        min-height: auto;
+        page-break-inside: avoid;
+        padding: 2rem 0;
+    }
+
+    .step-content {
+        opacity: 1;
+        transform: none;
+    }
+}

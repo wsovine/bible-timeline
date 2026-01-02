@@ -1,0 +1,13 @@
+# Development files
+dev/
+*.py
+
+# System files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE
+.idea/
+.vscode/

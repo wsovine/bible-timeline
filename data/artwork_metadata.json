@@ -1,0 +1,520 @@
+{
+  "metadata": {
+    "description": "Classical artwork metadata for Bible Timeline backgrounds",
+    "generated": "2025-12-28",
+    "totalBooks": 73
+  },
+  "artwork": {
+    "GEN": {
+      "image": "images/Sacrifice_of_Isaac-Caravaggio_(Uffizi).jpg",
+      "title": "Sacrifice of Isaac",
+      "artist": "Caravaggio",
+      "year": "1603",
+      "location": "Uffizi Gallery, Florence"
+    },
+    "EXO": {
+      "image": "images/EXO_moses_tablets_rembrandt.jpg",
+      "title": "Moses with the Ten Commandments",
+      "artist": "Rembrandt",
+      "year": "1659",
+      "location": "Gemäldegalerie, Berlin"
+    },
+    "LEV": {
+      "image": "images/LEV_aaron_highpriest.jpg",
+      "title": "Aaron as High Priest",
+      "artist": "Karel van Mander III",
+      "year": "c. 1630",
+      "location": "Statens Museum for Kunst, Copenhagen"
+    },
+    "NUM": {
+      "image": "images/NUM_brazen_serpent_rubens.jpg",
+      "title": "The Brazen Serpent",
+      "artist": "Peter Paul Rubens",
+      "year": "c. 1635",
+      "location": "National Gallery, London"
+    },
+    "DEU": {
+      "image": "images/DEU_tissot_moses_nebo.jpg",
+      "title": "Moses Sees the Promised Land from Afar",
+      "artist": "James Tissot",
+      "year": "c. 1896-1902",
+      "location": "Jewish Museum, New York"
+    },
+    "JOS": {
+      "image": "images/JOS_tissot_trumpets.jpg",
+      "title": "The Seven Trumpets of Jericho",
+      "artist": "James Tissot",
+      "year": "c. 1896-1902",
+      "location": "Jewish Museum, New York"
+    },
+    "JDG": {
+      "image": "images/JDG_samson_delilah_rubens.jpg",
+      "title": "Samson and Delilah",
+      "artist": "Peter Paul Rubens",
+      "year": "1609-1610",
+      "location": "National Gallery, London"
+    },
+    "RUT": {
+      "image": "images/RUT_boaz_poussin.jpg",
+      "title": "Summer (Ruth and Boaz)",
+      "artist": "Nicolas Poussin",
+      "year": "1660-1664",
+      "location": "Louvre, Paris"
+    },
+    "1SA": {
+      "image": "images/1SA_david_goliath_caravaggio.jpg",
+      "title": "David with the Head of Goliath",
+      "artist": "Caravaggio",
+      "year": "c. 1610",
+      "location": "Galleria Borghese, Rome"
+    },
+    "2SA": {
+      "image": "images/2SA_bathsheba_rembrandt.jpg",
+      "title": "Bathsheba at Her Bath",
+      "artist": "Rembrandt",
+      "year": "1654",
+      "location": "Louvre, Paris"
+    },
+    "1KI": {
+      "image": "images/1KI_solomon_judgment_poussin.jpg",
+      "title": "The Judgment of Solomon",
+      "artist": "Nicolas Poussin",
+      "year": "1649",
+      "location": "Louvre, Paris"
+    },
+    "2KI": {
+      "image": "images/2KI_elijah_chariot.jpg",
+      "title": "Elijah Taken Up in a Chariot of Fire",
+      "artist": "Giuseppe Angeli",
+      "year": "c. 1745",
+      "location": "National Gallery of Art, Washington D.C."
+    },
+    "1CH": {
+      "image": "images/1CH_ark_gargiulo.jpg",
+      "title": "David Bearing the Ark of the Covenant into Jerusalem",
+      "artist": "Domenico Gargiulo",
+      "year": "c. 1640s",
+      "location": "Private Collection"
+    },
+    "2CH": {
+      "image": "images/2CH_poynter_sheba.jpg",
+      "title": "The Visit of the Queen of Sheba to King Solomon",
+      "artist": "Edward Poynter",
+      "year": "1890",
+      "location": "Art Gallery of New South Wales, Sydney"
+    },
+    "EZR": {
+      "image": "images/EZR_reading_law.jpg",
+      "title": "Ezra Reads the Law to the People",
+      "artist": "Gustave Doré",
+      "year": "1866",
+      "location": "The Doré Bible Gallery"
+    },
+    "NEH": {
+      "image": "images/NEH_rebuilding.jpg",
+      "title": "The Rebuilding of the Temple",
+      "artist": "Gustave Doré",
+      "year": "1866",
+      "location": "The Doré Bible Gallery"
+    },
+    "TOB": {
+      "image": "images/TOB_raphael_tobit_rembrandt.jpg",
+      "title": "The Archangel Raphael Leaving Tobias's Family",
+      "artist": "Rembrandt",
+      "year": "1637",
+      "location": "Louvre, Paris"
+    },
+    "JDT": {
+      "image": "images/JDT_judith_holofernes_caravaggio.jpg",
+      "title": "Judith Beheading Holofernes",
+      "artist": "Caravaggio",
+      "year": "c. 1599",
+      "location": "Galleria Nazionale d'Arte Antica, Rome"
+    },
+    "EST": {
+      "image": "images/EST_esther.jpg",
+      "title": "Ahasuerus, Haman and Esther",
+      "artist": "Rembrandt",
+      "year": "1660",
+      "location": "Pushkin Museum, Moscow"
+    },
+    "1MA": {
+      "image": "images/1MA_maccabees.jpg",
+      "title": "Martyrdom of the Maccabees",
+      "artist": "Giustino Menescardi",
+      "year": "c. 1750",
+      "location": "Scuola Grande dei Carmini, Venice"
+    },
+    "2MA": {
+      "image": "images/2MA_martyrdom.jpg",
+      "title": "The Martyrdom of the Seven Maccabee Brothers",
+      "artist": "Unknown",
+      "year": "c. 1500",
+      "location": "Metropolitan Museum of Art, New York"
+    },
+    "JOB": {
+      "image": "images/JOB_latour.jpg",
+      "title": "Job Mocked by His Wife",
+      "artist": "Georges de La Tour",
+      "year": "c. 1650",
+      "location": "Musée Départemental d'Art Ancien et Contemporain, Épinal"
+    },
+    "PSA": {
+      "image": "images/PSA_david_harp.jpg",
+      "title": "King David Playing the Harp",
+      "artist": "Gerard van Honthorst",
+      "year": "1622",
+      "location": "Centraal Museum, Utrecht"
+    },
+    "PRO": {
+      "image": "images/PRO_solomon.jpg",
+      "title": "King Solomon in Old Age",
+      "artist": "Gustave Doré",
+      "year": "1866",
+      "location": "The Doré Bible Gallery"
+    },
+    "ECC": {
+      "image": "images/ECC_vanitas.jpg",
+      "title": "Vanitas Still Life",
+      "artist": "Adriaen Coorte",
+      "year": "c. 1690",
+      "location": "Private Collection"
+    },
+    "SNG": {
+      "image": "images/SNG_beloved.jpg",
+      "title": "The Beloved (The Bride)",
+      "artist": "Dante Gabriel Rossetti",
+      "year": "1865-1866",
+      "location": "Tate Britain, London"
+    },
+    "WIS": {
+      "image": "images/WIS_solomon.jpg",
+      "title": "The Dream of Solomon",
+      "artist": "Luca Giordano",
+      "year": "c. 1693",
+      "location": "Museo del Prado, Madrid"
+    },
+    "SIR": {
+      "image": "images/SIR_sirach_cleveland.jpg",
+      "title": "Sirach Seated with a Scroll (Historiated Initial)",
+      "artist": "Unknown (Southern France)",
+      "year": "c. 1275-1300",
+      "location": "Cleveland Museum of Art"
+    },
+    "ISA": {
+      "image": "images/ISA_isaiah_michelangelo.jpg",
+      "title": "The Prophet Isaiah",
+      "artist": "Michelangelo",
+      "year": "1508-1512",
+      "location": "Sistine Chapel, Vatican"
+    },
+    "JER": {
+      "image": "images/JER_jeremiah_rembrandt.jpg",
+      "title": "Jeremiah Lamenting the Destruction of Jerusalem",
+      "artist": "Rembrandt",
+      "year": "1630",
+      "location": "Rijksmuseum, Amsterdam"
+    },
+    "LAM": {
+      "image": "images/LAM_jeremiah_lamenting.jpg",
+      "title": "Jeremiah Lamenting the Destruction of Jerusalem",
+      "artist": "Rembrandt",
+      "year": "1630",
+      "location": "Rijksmuseum, Amsterdam"
+    },
+    "BAR": {
+      "image": "images/BAR_baruch.jpg",
+      "title": "The Prophet Baruch",
+      "artist": "Duccio di Buoninsegna",
+      "year": "1308-1311",
+      "location": "Museo dell'Opera del Duomo, Siena"
+    },
+    "EZK": {
+      "image": "images/EZK_ezekiel.jpg",
+      "title": "The Prophet Ezekiel",
+      "artist": "Michelangelo",
+      "year": "1508-1512",
+      "location": "Sistine Chapel, Vatican"
+    },
+    "DAN": {
+      "image": "images/DAN_lions_den_rubens.jpg",
+      "title": "Daniel in the Lions' Den",
+      "artist": "Peter Paul Rubens",
+      "year": "c. 1614-1616",
+      "location": "National Gallery of Art, Washington D.C."
+    },
+    "HOS": {
+      "image": "images/HOS_hosea_duccio_v2.jpg",
+      "title": "The Prophet Hosea",
+      "artist": "Duccio di Buoninsegna",
+      "year": "1308-1311",
+      "location": "Museo dell'Opera del Duomo, Siena"
+    },
+    "JOL": {
+      "image": "images/JOL_joel_michelangelo.jpg",
+      "title": "The Prophet Joel",
+      "artist": "Michelangelo",
+      "year": "1508-1512",
+      "location": "Sistine Chapel, Vatican"
+    },
+    "AMO": {
+      "image": "images/AMO_amos.jpg",
+      "title": "The Prophet Amos",
+      "artist": "Duccio di Buoninsegna",
+      "year": "1308-1311",
+      "location": "Museo dell'Opera del Duomo, Siena"
+    },
+    "OBA": {
+      "image": "images/OBA_obadiah_tissot.jpg",
+      "title": "Obadiah",
+      "artist": "James Tissot",
+      "year": "c. 1896-1902",
+      "location": "Jewish Museum, New York"
+    },
+    "JON": {
+      "image": "images/JON_jonah.jpg",
+      "title": "The Prophet Jonah",
+      "artist": "Michelangelo",
+      "year": "1508-1512",
+      "location": "Sistine Chapel, Vatican"
+    },
+    "MIC": {
+      "image": "images/MIC_micah_gentile.jpg",
+      "title": "The Prophet Micah",
+      "artist": "Gentile da Fabriano",
+      "year": "c. 1423",
+      "location": "Uffizi Gallery, Florence"
+    },
+    "NAM": {
+      "image": "images/NAM_nahum.jpg",
+      "title": "The Prophet Nahum",
+      "artist": "Unknown",
+      "year": "c. 1600",
+      "location": "Basilica of St. John Lateran, Rome"
+    },
+    "HAB": {
+      "image": "images/HAB_habakkuk.jpg",
+      "title": "Habakkuk and the Angel",
+      "artist": "Gian Lorenzo Bernini",
+      "year": "1656-1661",
+      "location": "Santa Maria del Popolo, Rome"
+    },
+    "ZEP": {
+      "image": "images/ZEP_zephaniah_yaroslavl.jpg",
+      "title": "The Prophet Zephaniah",
+      "artist": "Unknown (Yaroslavl School)",
+      "year": "18th century",
+      "location": "Private Collection"
+    },
+    "HAG": {
+      "image": "images/HAG_haggai.jpg",
+      "title": "The Prophet Haggai",
+      "artist": "Duccio di Buoninsegna",
+      "year": "1308-1311",
+      "location": "Museo dell'Opera del Duomo, Siena"
+    },
+    "ZEC": {
+      "image": "images/ZEC_zechariah_michelangelo.jpg",
+      "title": "The Prophet Zechariah",
+      "artist": "Michelangelo",
+      "year": "1508-1512",
+      "location": "Sistine Chapel, Vatican"
+    },
+    "MAL": {
+      "image": "images/MAL_malachi.jpg",
+      "title": "The Prophet Malachi",
+      "artist": "Duccio di Buoninsegna",
+      "year": "1308-1311",
+      "location": "Museo dell'Opera del Duomo, Siena"
+    },
+    "MAT": {
+      "image": "images/MAT_calling_caravaggio.jpg",
+      "title": "The Calling of Saint Matthew",
+      "artist": "Caravaggio",
+      "year": "1599-1600",
+      "location": "San Luigi dei Francesi, Rome"
+    },
+    "MRK": {
+      "image": "images/MRK_mark_hals.jpg",
+      "title": "Saint Mark the Evangelist",
+      "artist": "Frans Hals",
+      "year": "c. 1625",
+      "location": "Museum of Western European and Oriental Art, Odessa"
+    },
+    "LUK": {
+      "image": "images/LUK_luke_reni.jpg",
+      "title": "Saint Luke the Evangelist",
+      "artist": "Guido Reni",
+      "year": "1621",
+      "location": "Private Collection"
+    },
+    "JHN": {
+      "image": "images/JHN_john_velazquez.jpg",
+      "title": "Saint John the Evangelist on Patmos",
+      "artist": "Diego Velázquez",
+      "year": "c. 1618",
+      "location": "National Gallery, London"
+    },
+    "ACT": {
+      "image": "images/ACT_conversion_paul_caravaggio.jpg",
+      "title": "Conversion on the Way to Damascus",
+      "artist": "Caravaggio",
+      "year": "1601",
+      "location": "Santa Maria del Popolo, Rome"
+    },
+    "ROM": {
+      "image": "images/ROM_paul.jpg",
+      "title": "Saint Paul",
+      "artist": "Rembrandt (workshop)",
+      "year": "c. 1657",
+      "location": "National Gallery of Art, Washington D.C."
+    },
+    "1CO": {
+      "image": "images/1CO_paul_preaching.jpg",
+      "title": "Saint Paul Preaching in Athens",
+      "artist": "Raphael",
+      "year": "1515",
+      "location": "Victoria and Albert Museum, London"
+    },
+    "2CO": {
+      "image": "images/2CO_paul_sacchi.jpg",
+      "title": "Saint Paul Writing",
+      "artist": "Pier Francesco Sacchi",
+      "year": "c. 1520s",
+      "location": "Private Collection"
+    },
+    "GAL": {
+      "image": "images/GAL_paul_elgreco.jpg",
+      "title": "Saint Paul",
+      "artist": "El Greco",
+      "year": "c. 1598-1600",
+      "location": "Museo del Prado, Madrid"
+    },
+    "EPH": {
+      "image": "images/EPH_paul.jpg",
+      "title": "Saint Peter and Saint Paul",
+      "artist": "Jusepe de Ribera",
+      "year": "c. 1616",
+      "location": "Museo de Bellas Artes, Seville"
+    },
+    "PHP": {
+      "image": "images/PHP_paul.jpg",
+      "title": "The Apostle Saint Paul",
+      "artist": "Anthony van Dyck",
+      "year": "c. 1618-1620",
+      "location": "Private Collection"
+    },
+    "COL": {
+      "image": "images/COL_paul.jpg",
+      "title": "Saint Paul",
+      "artist": "Anthony van Dyck",
+      "year": "c. 1618-1620",
+      "location": "Musée des Beaux-Arts, Valenciennes"
+    },
+    "1TH": {
+      "image": "images/1TH_paul.jpg",
+      "title": "Saint Paul",
+      "artist": "Bartolomeo Montagna",
+      "year": "c. 1500",
+      "location": "Museo Poldi Pezzoli, Milan"
+    },
+    "2TH": {
+      "image": "images/2TH_paul.jpg",
+      "title": "Saint Paul",
+      "artist": "Unknown Spanish Master",
+      "year": "c. 1600",
+      "location": "Private Collection"
+    },
+    "1TI": {
+      "image": "images/1TI_timothy.jpg",
+      "title": "Timothy and Lois",
+      "artist": "Unknown",
+      "year": "19th century",
+      "location": "Bible illustration"
+    },
+    "2TI": {
+      "image": "images/2TI_paul.jpg",
+      "title": "An Elderly Man as Saint Paul",
+      "artist": "Rembrandt",
+      "year": "1659",
+      "location": "National Gallery, London"
+    },
+    "TIT": {
+      "image": "images/TIT_paul.jpg",
+      "title": "Saint Paul",
+      "artist": "Hans Holbein the Younger",
+      "year": "c. 1530",
+      "location": "Private Collection"
+    },
+    "PHM": {
+      "image": "images/PHM_paul.jpg",
+      "title": "Saint Paul",
+      "artist": "Pieter Verelst",
+      "year": "c. 1640",
+      "location": "Walters Art Museum, Baltimore"
+    },
+    "HEB": {
+      "image": "images/HEB_melchizedek.jpg",
+      "title": "The Meeting of Abraham and Melchizedek",
+      "artist": "Dieric Bouts",
+      "year": "c. 1464-1467",
+      "location": "Saint Peter's Church, Leuven"
+    },
+    "JAS": {
+      "image": "images/JAS_james.jpg",
+      "title": "Saint James the Greater",
+      "artist": "Jusepe de Ribera",
+      "year": "1631",
+      "location": "Dallas Museum of Art"
+    },
+    "1PE": {
+      "image": "images/1PE_peter.jpg",
+      "title": "Saint Peter",
+      "artist": "Peter Paul Rubens",
+      "year": "c. 1610-1612",
+      "location": "Museo del Prado, Madrid"
+    },
+    "2PE": {
+      "image": "images/2PE_peter.jpg",
+      "title": "Saint Peter in Tears",
+      "artist": "El Greco",
+      "year": "c. 1580-1590",
+      "location": "Bowes Museum, England"
+    },
+    "1JN": {
+      "image": "images/1JN_john_elgreco.jpg",
+      "title": "Saint John the Evangelist",
+      "artist": "El Greco",
+      "year": "c. 1600",
+      "location": "Museo del Prado, Madrid"
+    },
+    "2JN": {
+      "image": "images/2JN_john.jpg",
+      "title": "Saint John the Evangelist on Patmos",
+      "artist": "Titian (workshop)",
+      "year": "c. 1553-1555",
+      "location": "National Gallery of Art, Washington D.C."
+    },
+    "3JN": {
+      "image": "images/3JN_john_dolci.jpg",
+      "title": "Saint John Writing the Book of Revelation",
+      "artist": "Carlo Dolci",
+      "year": "c. 1670",
+      "location": "Ringling Museum of Art, Sarasota"
+    },
+    "JUD": {
+      "image": "images/JUD_jude.jpg",
+      "title": "Saint Jude Thaddaeus",
+      "artist": "Anthony van Dyck",
+      "year": "c. 1620",
+      "location": "Kunsthistorisches Museum, Vienna"
+    },
+    "REV": {
+      "image": "images/REV_apocalypse_vasnetsov.jpg",
+      "title": "Four Horsemen of the Apocalypse",
+      "artist": "Viktor Vasnetsov",
+      "year": "1887",
+      "location": "Museum of the Tver Regional Picture Gallery"
+    }
+  }
+}

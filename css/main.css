@@ -1,0 +1,1058 @@
+/* Main styles for Bible Timeline - Editorial Style */
+
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* ============================================
+   Fixed Site Header
+   ============================================ */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: var(--space-sm) var(--space-md);
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0) 100%);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    pointer-events: none;
+}
+
+.site-header.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.site-header__title {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+/* ============================================
+   Book Background (full-screen hover effect)
+   ============================================ */
+
+.book-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    pointer-events: none;
+}
+
+.book-background.visible {
+    opacity: 1;
+}
+
+/* Image background child elements */
+.book-background__blur,
+.book-background__sharp,
+.book-background__vignette {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+/* Blurred background fill */
+.book-background__blur {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(30px) brightness(0.4) saturate(1.2);
+    transform: scale(1.1); /* Prevent blur edges showing */
+}
+
+/* Sharp centered image on top */
+.book-background__sharp {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Subtle vignette overlay */
+.book-background__vignette {
+    background: radial-gradient(
+        ellipse 100% 100% at center,
+        transparent 0%,
+        transparent 40%,
+        rgba(10, 10, 10, 0.2) 70%,
+        rgba(10, 10, 10, 0.5) 100%
+    );
+}
+
+/* Era-based gradient backgrounds */
+.book-background[data-era="primeval"] {
+    background: radial-gradient(ellipse at 30% 20%, rgba(139, 90, 43, 0.4) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(101, 67, 33, 0.3) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(30, 20, 10, 0.8) 0%, rgba(10, 10, 10, 0.95) 100%);
+}
+
+.book-background[data-era="patriarchs"] {
+    background: radial-gradient(ellipse at 20% 30%, rgba(194, 154, 97, 0.4) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(139, 90, 43, 0.3) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(40, 30, 15, 0.8) 0%, rgba(10, 10, 10, 0.95) 100%);
+}
+
+.book-background[data-era="exodus"] {
+    background: radial-gradient(ellipse at 40% 20%, rgba(180, 60, 60, 0.35) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 60%, rgba(139, 90, 43, 0.3) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(50, 20, 20, 0.8) 0%, rgba(10, 10, 10, 0.95) 100%);
+}
+
+.book-background[data-era="judges"] {
+    background: radial-gradient(ellipse at 30% 40%, rgba(120, 100, 80, 0.4) 0%, transparent 50%),
+                radial-gradient(ellipse at 60% 70%, rgba(80, 70, 60, 0.3) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(35, 30, 25, 0.8) 0%, rgba(10, 10, 10, 0.95) 100%);
+}
+
+.book-background[data-era="united-kingdom"] {
+    background: radial-gradient(ellipse at 50% 30%, rgba(201, 169, 98, 0.4) 0%, transparent 50%),
+                radial-gradient(ellipse at 30% 70%, rgba(160, 130, 70, 0.3) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(45, 35, 20, 0.8) 0%, rgba(10, 10, 10, 0.95) 100%);
+}
+
+.book-background[data-era="divided-kingdom"] {
+    background: radial-gradient(ellipse at 25% 25%, rgba(140, 100, 70, 0.35) 0%, transparent 45%),
+                radial-gradient(ellipse at 75% 75%, rgba(100, 80, 60, 0.3) 0%, transparent 45%),
+                linear-gradient(180deg, rgba(40, 30, 20, 0.8) 0%, rgba(10, 10, 10, 0.95) 100%);
+}
+
+.book-background[data-era="exile"] {
+    background: radial-gradient(ellipse at 50% 50%, rgba(70, 70, 90, 0.4) 0%, transparent 50%),
+                radial-gradient(ellipse at 20% 80%, rgba(50, 50, 70, 0.3) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(20, 20, 30, 0.85) 0%, rgba(10, 10, 10, 0.95) 100%);
+}
+
+.book-background[data-era="post-exile"] {
+    background: radial-gradient(ellipse at 60% 30%, rgba(100, 110, 90, 0.35) 0%, transparent 50%),
+                radial-gradient(ellipse at 30% 70%, rgba(80, 90, 70, 0.3) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(25, 30, 25, 0.8) 0%, rgba(10, 10, 10, 0.95) 100%);
+}
+
+.book-background[data-era="intertestamental"] {
+    background: radial-gradient(ellipse at 40% 40%, rgba(90, 90, 100, 0.35) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 60%, rgba(70, 70, 80, 0.3) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(25, 25, 30, 0.8) 0%, rgba(10, 10, 10, 0.95) 100%);
+}
+
+.book-background[data-era="gospels"] {
+    background: radial-gradient(ellipse at 50% 30%, rgba(201, 169, 98, 0.45) 0%, transparent 50%),
+                radial-gradient(ellipse at 40% 70%, rgba(180, 150, 80, 0.3) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(40, 35, 20, 0.75) 0%, rgba(10, 10, 10, 0.95) 100%);
+}
+
+.book-background[data-era="apostolic"] {
+    background: radial-gradient(ellipse at 30% 30%, rgba(100, 80, 140, 0.35) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 70%, rgba(140, 100, 80, 0.3) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(30, 25, 35, 0.8) 0%, rgba(10, 10, 10, 0.95) 100%);
+}
+
+.book-background[data-era="wisdom"] {
+    background: radial-gradient(ellipse at 50% 50%, rgba(120, 120, 140, 0.35) 0%, transparent 50%),
+                radial-gradient(ellipse at 30% 30%, rgba(100, 100, 120, 0.25) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(25, 25, 30, 0.8) 0%, rgba(10, 10, 10, 0.95) 100%);
+}
+
+.book-background[data-era="church-age"] {
+    background: radial-gradient(ellipse at 50% 70%, rgba(180, 160, 100, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 30% 30%, rgba(100, 80, 60, 0.2) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(20, 18, 15, 0.85) 0%, rgba(10, 10, 10, 0.95) 100%);
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    font-weight: 300;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Site Header (top left)
+   ============================================ */
+
+.site-header {
+    position: fixed;
+    top: var(--space-md);
+    left: var(--space-md);
+    z-index: 100;
+}
+
+.site-title {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    text-transform: lowercase;
+}
+
+.title-line {
+    display: block;
+}
+
+/* ============================================
+   Timeline Track (left side vertical line)
+   ============================================ */
+
+.timeline-track {
+    position: fixed;
+    left: var(--timeline-left);
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    z-index: 50;
+    pointer-events: none;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        var(--color-line) 10%,
+        var(--color-line) 90%,
+        transparent 100%
+    );
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 15%; /* JS controls this - moves from 15% (top) to 85% (bottom) */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: var(--color-text);
+    border-radius: 50%;
+    /* Transition scale and color, but not top (which follows scroll) */
+    transition: transform var(--transition-normal), background var(--transition-normal);
+}
+
+.year-paused .timeline-dot {
+    transform: translate(-50%, -50%) scale(1.5);
+    background: var(--color-accent);
+}
+
+/* Timeline Ticks - appear as books start */
+.timeline-ticks {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.timeline-tick {
+    position: absolute;
+    left: 4px; /* Position to right of the line */
+    width: 12px;
+    height: 2px;
+    background: var(--color-text-dim);
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left center;
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.timeline-tick.visible {
+    transform: translateY(-50%) scaleX(1);
+    opacity: 1;
+}
+
+/* Canonization glow levels - ticks glow brighter with each council */
+.timeline-ticks.canon-level-1 .timeline-tick.visible {
+    box-shadow: 0 0 4px rgba(201, 169, 98, 0.3);
+}
+
+.timeline-ticks.canon-level-2 .timeline-tick.visible {
+    box-shadow: 0 0 6px rgba(201, 169, 98, 0.4);
+}
+
+.timeline-ticks.canon-level-3 .timeline-tick.visible {
+    box-shadow: 0 0 8px rgba(201, 169, 98, 0.5);
+}
+
+.timeline-ticks.canon-level-4 .timeline-tick.visible {
+    box-shadow: 0 0 10px rgba(201, 169, 98, 0.6);
+}
+
+.timeline-ticks.canon-level-5 .timeline-tick.visible {
+    box-shadow: 0 0 12px rgba(201, 169, 98, 0.7),
+                0 0 20px rgba(201, 169, 98, 0.4);
+}
+
+/* Pulse animation when a new canonization level is reached */
+.timeline-ticks.canon-pulse .timeline-tick.visible {
+    animation: canon-pulse 0.6s ease-out;
+}
+
+@keyframes canon-pulse {
+    0% {
+        box-shadow: 0 0 20px rgba(201, 169, 98, 0.9),
+                    0 0 40px rgba(201, 169, 98, 0.6);
+    }
+    100% {
+        box-shadow: inherit;
+    }
+}
+
+/* Era Dividers */
+.timeline-eras {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.era-divider {
+    position: absolute;
+    right: 4px; /* Position to left of the line */
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.era-divider__label {
+    font-family: var(--font-sans);
+    font-size: 0.625rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    white-space: nowrap;
+    text-align: right;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+.era-divider.label-visible .era-divider__label {
+    opacity: 1;
+}
+
+.era-divider__tick {
+    width: 16px;
+    height: 2px;
+    background: var(--color-accent);
+    flex-shrink: 0;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.era-divider.tick-visible .era-divider__tick {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* ============================================
+   Milestone Markers (left side timeline labels)
+   ============================================ */
+
+.milestone-marker {
+    position: absolute;
+    right: 4px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    pointer-events: none;
+}
+
+.milestone-marker__label {
+    font-family: var(--font-sans);
+    font-size: 0.5625rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: rgba(201, 169, 98, 0.8);
+    white-space: nowrap;
+    text-align: right;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+.milestone-marker.label-visible .milestone-marker__label {
+    opacity: 1;
+}
+
+.milestone-marker__year {
+    font-family: var(--font-sans);
+    font-size: 0.5rem;
+    font-weight: 400;
+    color: rgba(201, 169, 98, 0.5);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+
+.milestone-marker.label-visible .milestone-marker__year {
+    opacity: 1;
+}
+
+/* Tick mark for milestone (next to timeline) */
+.milestone-marker::after {
+    content: '';
+    width: 10px;
+    height: 2px;
+    background: rgba(201, 169, 98, 0.6);
+    flex-shrink: 0;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.milestone-marker.tick-visible::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* ============================================
+   Milestone Cards (right side, in book grid)
+   ============================================ */
+
+.milestone-card {
+    background: linear-gradient(145deg, rgba(30, 25, 18, 0.98) 0%, rgba(15, 12, 8, 0.99) 100%);
+    border: 1px solid var(--color-accent);
+    border-radius: 6px;
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 120px;
+    /* Transform, opacity, and z-index controlled by JS for stacking */
+    transform-origin: center bottom;
+    transition: box-shadow 0.3s ease;
+}
+
+.milestone-card:first-of-type,
+.milestone-card[style*="z-index: 1"] {
+    /* Newest card gets subtle glow */
+    box-shadow: 0 4px 20px rgba(201, 169, 98, 0.15);
+}
+
+.milestone-card__year {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--space-xs);
+}
+
+.milestone-card__title {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0 0 var(--space-sm);
+    line-height: 1.3;
+}
+
+.milestone-card__description {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Large milestone variant (e.g., The Living Tradition) */
+.milestone-card--large {
+    min-height: 120px;
+    padding: var(--space-md) var(--space-lg);
+}
+
+.milestone-card--large .milestone-card__title {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+}
+
+.milestone-card--large .milestone-card__description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ============================================
+   Message Container & Floating Callouts
+   ============================================ */
+
+.message-container {
+    position: fixed;
+    top: 0;
+    left: var(--content-left);
+    width: var(--content-width);
+    bottom: 0;
+    z-index: 25;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-box {
+    width: 100%;
+    max-width: 500px;
+    padding: var(--space-lg);
+    background: linear-gradient(145deg, rgba(30, 25, 18, 0.95) 0%, rgba(15, 12, 8, 0.98) 100%);
+    border: 1px solid var(--color-accent);
+    border-radius: 6px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    pointer-events: none;
+    text-align: center;
+}
+
+.message-box.visible {
+    opacity: calc(var(--message-opacity, 1));
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.message-box__title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    margin: 0 0 var(--space-md);
+    line-height: 1.3;
+}
+
+.message-box__content {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* You Are Here marker on timeline */
+.timeline-you-are-here {
+    position: absolute;
+    top: 85%; /* Same position where the scrolling dot ends */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the dot on this position */
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    pointer-events: none;
+}
+
+.timeline-you-are-here.visible {
+    opacity: 1;
+}
+
+.you-are-here-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--color-accent),
+                0 0 24px rgba(201, 169, 98, 0.4);
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 12px var(--color-accent),
+                    0 0 24px rgba(201, 169, 98, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 16px var(--color-accent),
+                    0 0 32px rgba(201, 169, 98, 0.6);
+    }
+}
+
+.you-are-here-label {
+    position: absolute;
+    top: 50%;
+    right: 100%; /* Position to the left of the dot */
+    transform: translateY(-50%);
+    margin-right: 12px;
+    font-family: var(--font-sans);
+    font-size: 0.625rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    white-space: nowrap;
+}
+
+/* ============================================
+   Year Display (large serif numbers)
+   ============================================ */
+
+.year-display {
+    position: fixed;
+    left: calc(var(--timeline-left) + 2.5rem);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 60;
+    pointer-events: none;
+    /* Prevent year from overlapping book columns */
+    max-width: calc(var(--content-left) - var(--timeline-left) - 4rem);
+}
+
+.year-number {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: var(--year-font-size);
+    font-weight: 400;
+    font-style: italic;
+    line-height: var(--year-line-height);
+    color: var(--color-text);
+    transition: color var(--transition-normal);
+    /* Padding for italic overhang */
+    padding-left: 0.15em;
+}
+
+.year-suffix {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    color: var(--color-text-muted);
+    margin-top: var(--space-xs);
+}
+
+.year-paused .year-number {
+    color: var(--color-accent);
+}
+
+/* ============================================
+   Era Label (right side, rotated)
+   ============================================ */
+
+.era-label {
+    position: fixed;
+    right: var(--era-right);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 60;
+    pointer-events: none;
+}
+
+.era-text {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--color-text-dim);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    letter-spacing: 0.1em;
+    transition: color var(--transition-normal);
+}
+
+.year-paused .era-text {
+    color: var(--color-text-muted);
+}
+
+/* ============================================
+   Main Content Area
+   ============================================ */
+
+.timeline-content {
+    position: relative;
+    margin-left: var(--content-left);
+    width: var(--content-width);
+    min-height: 100vh;
+}
+
+/* ============================================
+   Introduction Section
+   ============================================ */
+
+.timeline-intro {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: var(--space-xl) 0;
+}
+
+.intro-content {
+    text-align: left;
+    max-width: 500px;
+}
+
+.intro-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.1;
+    margin: 0 0 var(--space-md);
+    color: var(--color-text);
+}
+
+.intro-subtitle {
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-lg);
+    line-height: 1.7;
+}
+
+.scroll-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+    color: var(--color-text-dim);
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+}
+
+.scroll-arrow {
+    width: 24px;
+    height: 24px;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+/* ============================================
+   Scroll Spacer (creates scrollable area)
+   ============================================ */
+
+.scroll-spacer {
+    height: 8000px; /* Default, will be set by JS */
+    position: relative;
+}
+
+/* ============================================
+   Book Grid (sticky container)
+   ============================================ */
+
+.book-columns {
+    position: fixed;
+    top: 50%;
+    left: var(--content-left);
+    width: var(--content-width);
+    /* Fixed height container - rows always take equal space */
+    height: 360px;
+    transform: translateY(-50%);
+    display: grid;
+    gap: var(--space-sm);
+    z-index: 40;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    overflow: visible;
+    /* Fixed 4-column x 3-row grid (max 12 books) */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: start;
+}
+
+.book-columns.visible {
+    opacity: 1;
+}
+
+/* ============================================
+   Book Cards
+   ============================================ */
+
+.book-card {
+    padding: var(--space-sm);
+    border-left: 2px solid var(--color-accent);
+    background: var(--color-bg);
+    pointer-events: auto;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.book-card:hover {
+    border-color: var(--color-text);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.book-card__title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+    margin: 0 0 var(--space-xs);
+    color: var(--color-text);
+}
+
+.book-card__date {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-xs);
+}
+
+.book-card__meta {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--color-text-dim);
+    margin: 0;
+}
+
+/* ============================================
+   Closing Section
+   ============================================ */
+
+.timeline-closing {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: var(--space-xl) 0;
+}
+
+.closing-content {
+    max-width: 400px;
+}
+
+/* ============================================
+   Book Steps - Single Book (Legacy)
+   ============================================ */
+
+.book-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+    margin: 0 0 var(--space-sm);
+    color: var(--color-text);
+}
+
+.book-description {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-sm);
+}
+
+.book-meta {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: var(--color-text-dim);
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+/* ============================================
+   Book Steps - Multiple Books (Side by Side)
+   ============================================ */
+
+.step-content--multi {
+    max-width: none;
+}
+
+.book-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--space-lg);
+    align-items: flex-start;
+    margin-bottom: var(--space-sm);
+}
+
+.book-item {
+    flex: 0 0 auto;
+    min-width: 160px;
+    max-width: 220px;
+    padding: var(--space-sm);
+    border-left: 2px solid var(--color-text-dim);
+    transition: border-color var(--transition-normal);
+}
+
+/* Stagger: each subsequent book steps down to show chronological sequence */
+.book-item:nth-child(2) { margin-top: 1.5rem; }
+.book-item:nth-child(3) { margin-top: 3rem; }
+.book-item:nth-child(4) { margin-top: 4.5rem; }
+
+.timeline-step.is-active .book-item {
+    border-color: var(--color-accent);
+}
+
+.book-item__title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+    margin: 0 0 var(--space-xs);
+    color: var(--color-text);
+}
+
+.book-item__date {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-xs);
+}
+
+.book-item__meta {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--color-text-dim);
+    margin: 0;
+}
+
+.group-meta {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--color-text-dim);
+    margin: 0;
+    font-style: italic;
+}
+
+/* ============================================
+   Highlighted State (when book is in focus)
+   ============================================ */
+
+.year-highlighted .year-number {
+    color: var(--color-accent);
+}
+
+.year-highlighted .timeline-dot {
+    transform: translate(-50%, -50%) scale(1.5);
+    background: var(--color-accent);
+}
+
+.year-highlighted .era-text {
+    color: var(--color-text-muted);
+}
+
+/* ============================================
+   Legacy Closing Styles (kept for compatibility)
+   ============================================ */
+
+.step-content--closing {
+    max-width: 400px;
+}
+
+/* You Are Here section (closing) */
+.you-are-here-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.1;
+    color: var(--color-accent);
+    margin: 0 0 var(--space-lg);
+    text-shadow: 0 0 40px rgba(201, 169, 98, 0.3);
+}
+
+.closing-text {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.closing-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    transition: color var(--transition-fast);
+}
+
+.closing-link:hover {
+    color: var(--color-text);
+}
+
+.closing-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+.site-footer {
+    position: fixed;
+    bottom: var(--space-md);
+    left: var(--space-md);
+    z-index: 100;
+}
+
+.site-footer a {
+    font-size: 0.75rem;
+    color: var(--color-text-dim);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color var(--transition-fast);
+}
+
+.site-footer a:hover {
+    color: var(--color-text-muted);
+}
+
+/* ============================================
+   Error State
+   ============================================ */
+
+.error-message {
+    padding: var(--space-xl);
+    text-align: center;
+    color: #ff6b6b;
+}
+
+.error-message h2 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    margin: 0 0 var(--space-sm);
+}
+
+.error-message p {
+    margin: 0;
+    opacity: 0.8;
+}

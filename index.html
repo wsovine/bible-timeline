@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Timeline: A Chronological Journey Through Scripture</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Fixed header (appears when intro scrolls away) -->
+    <header class="site-header" id="site-header">
+        <h1 class="site-header__title">The Bible Timeline</h1>
+    </header>
+
+    <!-- Background overlay for book hover -->
+    <div class="book-background" id="book-background">
+        <div class="book-background__blur"></div>
+        <div class="book-background__sharp"></div>
+        <div class="book-background__vignette"></div>
+    </div>
+
+    <!-- Timeline track (left side) -->
+    <div class="timeline-track">
+        <div class="timeline-line"></div>
+        <div class="timeline-eras" id="timeline-eras">
+            <!-- Era dividers and milestones added dynamically by JS -->
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-you-are-here">
+            <span class="you-are-here-dot"></span>
+            <span class="you-are-here-label">You are here</span>
+        </div>
+    </div>
+
+    <!-- Message display area (for floating callouts) -->
+    <div class="message-container" id="message-container"></div>
+
+    <!-- Year display (left area) -->
+    <div class="year-display">
+        <span class="year-number">4000</span>
+        <span class="year-suffix">BC</span>
+    </div>
+
+    <!-- Era label (right side, rotated) -->
+    <div class="era-label">
+        <span class="era-text">Primeval History</span>
+    </div>
+
+    <!-- Main scrollable content -->
+    <main class="timeline-content">
+        <!-- Introduction (top area before scroll starts) -->
+        <section class="timeline-intro">
+            <div class="intro-content">
+                <h1 class="intro-title">The Bible Timeline</h1>
+                <p class="intro-subtitle">A chronological journey through the events of the Bible to current day.</p>
+                <div class="scroll-hint">
+                    <span>Scroll to explore</span>
+                    <svg class="scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 5v14M5 12l7 7 7-7"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scroll spacer - this creates the scrollable area -->
+        <div class="scroll-spacer" id="scroll-spacer">
+            <!-- Height determined by JS based on total years / gap compression -->
+        </div>
+
+        <!-- Fixed book grid (sticky positioned) -->
+        <div class="book-columns" id="book-columns">
+            <!-- Book cards are added dynamically by JS -->
+        </div>
+
+        <!-- Closing (bottom area after scroll ends) -->
+        <section class="timeline-closing">
+            <div class="closing-content">
+                <h2 class="you-are-here-title">You Are Here</h2>
+                <p class="closing-text">The story isn't finished.<br>You are part of it.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
