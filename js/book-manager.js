@@ -39,6 +39,7 @@ export class BookManager {
         this.blurElement = this.backgroundElement?.querySelector('.book-background__blur');
         this.sharpElement = this.backgroundElement?.querySelector('.book-background__sharp');
         this.activeHoverBook = null;
+        this.lastShowTime = 0; // Track when background was shown to prevent immediate toggle
 
         // Pre-process books for quick lookup
         this.booksByDate = this.preprocessBooks();
@@ -335,6 +336,7 @@ export class BookManager {
     showBackground(era, bookId) {
         if (!this.backgroundElement) return;
         this.activeHoverBook = bookId;
+        this.lastShowTime = Date.now();
 
         // Check for book-specific background image
         const bookData = this.visibleBooks.get(bookId);
@@ -375,9 +377,14 @@ export class BookManager {
     toggleBackground(era, bookId, e) {
         if (!this.backgroundElement) return;
 
-        // If already showing this book's background, hide it
+        // If already showing this book's background, check if we should hide it
         if (this.activeHoverBook === bookId) {
-            this.hideBackground();
+            // On mobile, mouseenter fires right before click on the same tap
+            // If background was just shown (within 100ms), this is the same tap - don't toggle off
+            const timeSinceShow = Date.now() - this.lastShowTime;
+            if (timeSinceShow > 100) {
+                this.hideBackground();
+            }
             return;
         }
 
