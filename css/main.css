@@ -459,7 +459,7 @@ body {
     min-height: 120px;
     /* Transform, opacity, and z-index controlled by JS for stacking */
     transform-origin: center bottom;
-    transition: box-shadow 0.3s ease;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out, box-shadow 0.3s ease;
 }
 
 .milestone-card:first-of-type,
